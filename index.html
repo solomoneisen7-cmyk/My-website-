@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenScapes | Professional Landscaping Services</title>
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
@@ -29,7 +28,7 @@
             line-height: 1.6;
             color: var(--dark-text);
             background-color: var(--white);
-            text-align: left; /* LTR alignment */
+            text-align: left;
         }
 
         .container {
@@ -121,6 +120,7 @@
             font-weight: bold;
             cursor: pointer;
             transition: transform 0.2s;
+            font-size: 1rem;
         }
 
         .btn-primary:hover {
@@ -179,7 +179,6 @@
 
         .portfolio-item {
             height: 250px;
-            background-color: #ddd;
             position: relative;
             border-radius: 8px;
             overflow: hidden;
@@ -187,7 +186,6 @@
             background-position: center;
         }
 
-        /* Placeholder Images */
         .item1 { background-image: url('https://images.unsplash.com/photo-1592595896551-12b371d546d5?auto=format&fit=crop&w=600&q=80'); }
         .item2 { background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80'); }
         .item3 { background-image: url('https://images.unsplash.com/photo-1584479898061-15742e14f50d?auto=format&fit=crop&w=600&q=80'); }
@@ -208,7 +206,7 @@
             opacity: 1;
         }
 
-        /* Contact */
+        /* Contact Section */
         .contact {
             padding: 60px 0;
             background: var(--white);
@@ -236,19 +234,36 @@
             width: 20px;
         }
 
+        /* Updated Form Styles */
         .contact-form {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px;
         }
 
-        .contact-form input, .contact-form textarea {
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
             padding: 12px;
             border: 1px solid #ddd;
             border-radius: 5px;
             font-family: inherit;
             font-size: 1rem;
-            text-align: left;
+            width: 100%;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
         }
 
         /* Footer */
@@ -287,7 +302,6 @@
 </head>
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">GreenScapes <i class="fas fa-leaf"></i></a>
@@ -300,7 +314,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header id="home" class="hero">
         <div class="hero-content">
             <h1>Transform Your Outdoor Space</h1>
@@ -309,7 +322,6 @@
         </div>
     </header>
 
-    <!-- Services -->
     <section id="services" class="services">
         <div class="container">
             <h2 class="section-title">Our Services</h2>
@@ -338,7 +350,6 @@
         </div>
     </section>
 
-    <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <h2 class="section-title">Recent Projects</h2>
@@ -356,7 +367,6 @@
         </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Contact Us</h2>
@@ -368,19 +378,22 @@
                     <p><i class="fas fa-map-marker-alt"></i> 123 Green Way, Cityville</p>
                 </div>
                 
-                <!-- Contact Form -->
-                <!-- Note: Remember to add your Formspree ID to the action URL below -->
-                <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="How can we help?" rows="5" required></textarea>
+                <form class="contact-form" action="https://formspree.io/f/xqedgzok" method="POST">
+                    <div class="form-group">
+                        <label>Your email:</label>
+                        <input type="email" name="email" placeholder="email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Your message:</label>
+                        <textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
+                    </div>
                     <button type="submit" class="btn-primary">Send Message</button>
                 </form>
+
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 GreenScapes Landscaping. All rights reserved.</p>
     </footer>
